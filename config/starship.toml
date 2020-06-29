@@ -1,0 +1,31 @@
+prompt_order = ["directory", "git_branch", "git_status", "git_state", "cmd_duration", "line_break", "character"]
+
+[directory]
+style = "blue"
+prefix = ""
+suffix = ""
+truncation_length = 0
+
+[git_branch]
+style = "bright-black"
+symbol = ""
+
+[git_status]
+conflicted = ""
+diverged = "⇡⇣"
+untracked = ""
+stashed = "≡"
+modified = "*"
+staged = ""
+renamed = ""
+deleted = ""
+prefix = ""
+suffix = ""
+style = "bright-black"
+
+[git_state]
+style = "bright-black"
+
+[character]
+style_success = "purple"
+style_failure = "red"
