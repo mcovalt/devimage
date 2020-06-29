@@ -15,6 +15,7 @@ Contains:
 - less
 - [ripgrep](https://github.com/BurntSushi/ripgrep) (aliased to `grep`)
 - [s6](https://github.com/just-containers/s6-overlay) (includes init stript to try to set `localtime` based on IP)
+- ssh client
 - [starship](https://starship.rs/) made to look somewhat like [pure](https://github.com/sindresorhus/pure)
 - tmux
 - tzdata

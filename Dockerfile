@@ -10,6 +10,7 @@ RUN apk add --no-cache \
         htop \
         jq \
         less \
+        openssh-client \
         ripgrep \
         tmux \
         tzdata \
