@@ -18,5 +18,6 @@ set fish_greeting ""
 
 alias ls="exa"
 alias grep="rg -uuu"
+alias bat="batcat"
 
 starship init fish | source
