@@ -1,4 +1,4 @@
-# devimage-base
+# devimage:base
 A Docker image I use to develop in.
 
 Contains:
