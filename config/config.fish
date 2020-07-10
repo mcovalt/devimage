@@ -19,5 +19,6 @@ set fish_greeting ""
 alias ls="exa"
 alias grep="rg -uuu"
 alias bat="batcat"
+set -x MANPAGER "sh -c 'col -bx | batcat -l man -p'"
 
 starship init fish | source

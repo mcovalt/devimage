@@ -43,14 +43,14 @@ RUN sed -i 's:archive.ubuntu.com:mirror.math.princeton.edu/pub:' /etc/apt/source
     | grep 'linux_amd64.tar.gz$' \
     | xargs curl -sL \
     | tar -xOzf - curlie \
-    > /usr/local/bin/curlie \
+    > /usr/local/bin/curlie && chmod +x /usr/local/bin/curlie \
  # exa -- https://github.com/ogham/exa
  && curl -sL https://api.github.com/repos/ogham/exa/releases/latest \
     | jq -r '.assets[].browser_download_url' \
     | grep 'exa-linux-x86_64' \
     | xargs curl -sL \
     | funzip \
-    > /usr/local/bin/exa \
+    > /usr/local/bin/exa && chmod +x /usr/local/bin/exa \
  # s6-overlay -- https://github.com/just-containers/s6-overlay
  && curl -sL https://api.github.com/repos/just-containers/s6-overlay/releases/latest \
     | jq -r '.assets[].browser_download_url' \
@@ -66,7 +66,7 @@ RUN sed -i 's:archive.ubuntu.com:mirror.math.princeton.edu/pub:' /etc/apt/source
     | grep 'x86_64-unknown-linux-gnu.tar.gz$' \
     | xargs curl -sL \
     | tar -xOzf - starship \
-    > /usr/local/bin/starship \
+    > /usr/local/bin/starship && chmod +x /usr/local/bin/starship \
  && chsh -s /usr/bin/fish
 
 COPY s6 /etc
