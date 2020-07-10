@@ -58,7 +58,8 @@ RUN sed -i 's:^path-exclude=/usr/share/man:#path-exclude=/usr/share/man:' /etc/d
     | xargs curl -sL \
     | tar -xOzf - starship \
     > /usr/local/bin/starship && chmod +x /usr/local/bin/starship \
- && chsh -s /usr/bin/fish
+ && chsh -s /usr/bin/fish \
+ && ln -s /usr/bin/sh /bin/sh
 
 COPY s6 /etc
 COPY config/config.fish /root/.config/fish/config.fish
@@ -71,5 +72,4 @@ ENV S6_KEEP_ENV=1 \
 
 WORKDIR /workspace
 VOLUME ["/root/.local/share/fish/fish_history"]
-SHELL ["/usr/bin/fish", "-c"]
 ENTRYPOINT [ "/init" ]
